@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Chiropractic &amp; Cold Laser Therapy in Seattle | Atlas Chiropractic Health Center</title>
+<meta name="description" content="Manual full-body chiropractic, Erchonia cold laser therapy, prenatal and pediatric care on First Hill, across from the Seattle U soccer field. Book a new patient exam online.">
+<link rel="icon" href="../assets/atlas-emblem.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#0D1315; --slate:#162024; --slate-2:#1F2B30; --chalk:#F1F3F2; --white:#fff;
+  --laser:#FF4A2A; --laser-soft:#FF7A5C; --mint:#BFE3D7; --dim:#97A5A8; --ink:#11181A; --rule:#D6DCDB;
+  --display:'Barlow Condensed','Arial Narrow',sans-serif; --sans:'Public Sans',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--chalk);color:var(--ink);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+h1,h2,h3{font-family:var(--display);font-weight:800;text-transform:uppercase;line-height:.92;letter-spacing:0;margin:0}
+h2{font-size:clamp(38px,5vw,68px)}
+h3{font-size:28px;line-height:1}
+p{margin:0 0 1em}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 26px;border-radius:6px;font:700 15px/1 var(--display);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;transition:background .2s,transform .2s,box-shadow .2s;border:0;cursor:pointer}
+.btn-laser{background:var(--laser);color:#fff;box-shadow:0 0 0 rgba(255,74,42,0)}
+.btn-laser:hover{background:#E83A1B;box-shadow:0 8px 28px rgba(255,74,42,.35);transform:translateY(-1px)}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.35);color:#fff}
+.btn-ghost:hover{border-color:#fff}
+.btn-dark{background:var(--ink);color:#fff}
+.arrow::after{content:"\2192";font-family:var(--sans)}
+
+/* header */
+header.site{position:absolute;top:0;left:0;right:0;z-index:50;color:#fff}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:88px;gap:24px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{width:44px;height:44px}
+.brand span{font:800 20px/1 var(--display);text-transform:uppercase;letter-spacing:.02em}
+.brand span small{display:block;font:600 11px/1.4 var(--sans);letter-spacing:.22em;color:var(--dim);margin-top:4px}
+nav.main{display:flex;align-items:center;gap:30px}
+nav.main a{text-decoration:none;font-size:15px;font-weight:500;color:#DCE3E3}
+nav.main a:not(.btn):hover{color:#fff}
+nav.main .btn{color:#fff;padding:13px 20px}
+.menu-btn{display:none;background:none;border:1.5px solid rgba(255,255,255,.3);border-radius:6px;width:46px;height:46px;padding:12px 11px;cursor:pointer;color:#fff}
+.menu-btn span{display:block;height:2px;background:currentColor;margin:4px 0;transition:transform .25s,opacity .2s}
+.nav-open .menu-btn span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.nav-open .menu-btn span:nth-child(2){opacity:0}
+.nav-open .menu-btn span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+/* hero */
+.hero{background:var(--night);color:#fff;padding:150px 0 0;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;right:-10%;top:-20%;width:60%;height:120%;background:radial-gradient(closest-side,rgba(255,74,42,.16),transparent 70%);pointer-events:none}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:end;position:relative}
+.hero .kicker{display:inline-flex;align-items:center;gap:10px;font-size:14px;color:var(--mint);margin-bottom:26px}
+.hero .kicker i{width:8px;height:8px;border-radius:50%;background:var(--laser);box-shadow:0 0 12px var(--laser)}
+.hero h1{font-size:clamp(54px,7.6vw,118px);text-wrap:balance}
+.hero h1 .hot{color:var(--laser)}
+.hero .lede{font-size:19px;color:#C8D2D3;max-width:32em;margin:28px 0 34px}
+.hero .actions{display:flex;flex-wrap:wrap;gap:12px;padding-bottom:72px}
+.hero .shot{position:relative;align-self:stretch;display:flex;align-items:flex-end}
+.hero .shot img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:10px 10px 0 0;object-position:58% center}
+.hero .shot .tag{position:absolute;left:-28px;bottom:48px;background:#fff;color:var(--ink);padding:14px 18px;border-radius:8px;font-size:14px;line-height:1.35;box-shadow:0 16px 40px rgba(0,0,0,.35);max-width:240px}
+.hero .shot .tag b{display:block;font:800 18px/1.1 var(--display);text-transform:uppercase}
+.beam{height:3px;background:linear-gradient(90deg,transparent,var(--laser) 18%,var(--laser-soft) 50%,var(--laser) 82%,transparent);box-shadow:0 0 18px 2px rgba(255,74,42,.55);position:relative;z-index:2}
+
+/* stats */
+.stats{background:var(--slate);color:#fff}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.stats .wrap>div{padding:30px 0 30px 28px;border-left:1px solid #2B383D}
+.stats .wrap>div:first-child{border-left:0;padding-left:0}
+.stats b{display:block;font:800 46px/1 var(--display);}
+.stats span{font-size:14px;color:var(--dim)}
+
+/* services bento */
+.services{padding:110px 0 90px}
+.services .top{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:48px;flex-wrap:wrap}
+.services .top p{max-width:30em;color:#3A4447;margin:0;font-size:17.5px}
+.bento{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:minmax(210px,auto);gap:16px}
+.tile{border-radius:12px;padding:30px;position:relative;overflow:hidden;background:#fff;border:1px solid var(--rule);display:flex;flex-direction:column}
+.tile h3{margin-bottom:12px}
+.tile p{color:#3A4447;font-size:16px;margin:0}
+.tile .more{margin-top:auto;padding-top:18px;font-weight:600;font-size:15px;text-decoration:none;display:inline-flex;gap:8px}
+.t-laser{grid-column:span 4;grid-row:span 2;background:var(--night);color:#fff;border:0;padding:0;display:grid;grid-template-columns:1fr 1fr}
+.t-laser .copy{padding:40px;display:flex;flex-direction:column}
+.t-laser h3{font-size:52px;}
+.t-laser h3 span{color:var(--laser)}
+.t-laser p{color:#C8D2D3;font-size:17px}
+.t-laser .pill{align-self:flex-start;font-size:13px;letter-spacing:.04em;color:var(--mint);border:1px solid #2F4045;border-radius:999px;padding:6px 12px;margin-bottom:22px}
+.t-laser .copy .btn{align-self:flex-start;margin-top:auto}
+.t-laser .img{position:relative}
+.t-laser .img img{width:100%;height:100%;object-fit:cover;object-position:30% center}
+.t-laser .img::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--night),transparent 35%)}
+.t-family{grid-column:span 2;grid-row:span 2;padding:0;border:0;color:var(--ink);justify-content:flex-end;min-height:440px;background:var(--mint)}
+.t-family::before{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;border:2px solid rgba(17,24,26,.12);box-shadow:0 0 0 40px rgba(17,24,26,.04),0 0 0 80px rgba(17,24,26,.03)}
+.t-family h3{font-size:40px;}
+.t-family img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%}
+.t-family .copy{position:relative;z-index:1;padding:28px}
+.t-family p{color:#1B2726;font-size:16.5px}
+.t-family .more{color:var(--ink)}
+.t-adj,.t-ex,.t-mas{grid-column:span 2}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.chips span{font-size:14.5px;padding:8px 14px;border-radius:999px;background:#fff;border:1px solid var(--rule)}
+
+/* athletes */
+.athletes{background:var(--slate);color:#fff;padding:110px 0}
+.athletes .wrap{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.athletes img{border-radius:10px;width:100%;aspect-ratio:3/2;object-fit:cover}
+.athletes p{color:#C8D2D3;font-size:18px}
+.athletes h2{margin-bottom:26px}
+.athletes ul{list-style:none;padding:0;margin:28px 0 0;display:grid;gap:12px}
+.athletes li{padding-left:26px;position:relative;color:#E3EAEA}
+.athletes li::before{content:"";position:absolute;left:0;top:.7em;width:14px;height:2px;background:var(--laser);box-shadow:0 0 8px var(--laser)}
+
+/* pregnancy + peds */
+.family{background:var(--mint);padding:110px 0}
+.family .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:72px;align-items:center}
+.family .portrait{position:relative}
+.family .portrait img{border-radius:10px;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 30%}
+.family .cols{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:34px}
+.family .cols h3{font-size:24px;margin-bottom:10px}
+.family .cols p{font-size:16px;color:#22302F;margin:0}
+.family .lede{font-size:18.5px;color:#1B2726;margin-top:24px}
+.family .links{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.family .links a{background:var(--ink);color:#fff;text-decoration:none;border-radius:6px;padding:13px 18px;font-weight:600;font-size:15px}
+
+/* dr x */
+.drx{padding:100px 0}
+.drx .wrap{display:grid;grid-template-columns:220px 1fr 1fr;gap:48px;align-items:start}
+.drx img{border-radius:10px;width:100%}
+.drx h2{font-size:clamp(34px,4vw,54px);margin-bottom:8px}
+.drx .say{color:#5A6669;font-size:15px;margin-bottom:22px}
+.drx p{color:#2E383B}
+
+/* reviews */
+.reviews{background:var(--night);color:#fff;padding:100px 0}
+.reviews .top{display:flex;align-items:center;gap:32px;margin-bottom:48px;flex-wrap:wrap}
+.reviews .score{font:800 120px/0.8 var(--display);color:var(--laser)}
+.reviews .top p{margin:0;color:#C8D2D3;font-size:17px}
+.reviews .top p b{display:block;color:#fff;font:800 32px/1 var(--display);text-transform:uppercase;margin-bottom:6px}
+.rgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.rgrid blockquote{margin:0;background:var(--slate);border-radius:10px;padding:26px;display:flex;flex-direction:column;font-size:16px;color:#E3EAEA}
+.rgrid blockquote::before{content:"\2605\2605\2605\2605\2605";color:var(--laser);letter-spacing:3px;font-size:14px;margin-bottom:14px}
+.rgrid cite{margin-top:auto;padding-top:16px;font-style:normal;font-size:14px;color:var(--dim)}
+
+/* booking */
+.book{padding:110px 0;background:var(--chalk)}
+.book h2{margin-bottom:44px;max-width:14em}
+.book .panels{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.panel{border-radius:12px;padding:40px}
+.p-online{background:var(--night);color:#fff;display:flex;flex-direction:column}
+.p-online h3{font-size:38px;margin-bottom:16px}
+.p-online p{color:#C8D2D3}
+.p-online ol{margin:10px 0 30px;padding:0;list-style:none;counter-reset:s;display:grid;gap:14px}
+.p-online li{counter-increment:s;display:flex;gap:14px;align-items:baseline;color:#E3EAEA}
+.p-online li::before{content:counter(s);font:800 22px/1 var(--display);color:var(--laser);min-width:18px}
+.p-online .btn{align-self:flex-start}
+.p-online .forms{margin-top:auto;padding-top:30px;border-top:1px solid #26343A;font-size:15px;color:var(--dim)}
+.p-online .forms a{color:#fff;margin-right:14px;display:inline-block;margin-top:6px}
+.p-form{background:#fff;border:1px solid var(--rule)}
+.p-form h3{font-size:38px;margin-bottom:8px}
+.p-form .sub{color:#4A5558;margin-bottom:24px}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-bottom:6px;color:#3A4447}
+.field input,.field select,.field textarea{width:100%;font:inherit;font-size:16px;padding:13px 14px;border:1.5px solid #CBD3D2;border-radius:6px;background:#FAFBFB;color:var(--ink)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--laser);outline-offset:1px;border-color:transparent}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.p-form .btn{width:100%;margin-top:8px}
+.form-note{margin-top:14px;font-size:14px;background:#FFF0EC;color:#7A2414;padding:12px 14px;border-radius:6px}
+
+/* visit */
+.visit{background:#fff;border-top:1px solid var(--rule);padding:90px 0}
+.visit .wrap{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:56px}
+.visit h3{font-size:26px;margin-bottom:16px}
+.visit p{color:#2E383B;font-size:16px}
+.hours{display:grid;grid-template-columns:auto 1fr;gap:8px 20px;font-size:15.5px}
+.hours span:nth-child(even){text-align:right;color:#2E383B}
+.hours .is-today{color:var(--laser)!important;font-weight:700}
+.visit .ins{font-size:15px;color:#4A5558}
+.textlink{font-weight:600;text-decoration:underline;text-underline-offset:4px}
+
+footer{background:var(--night);color:var(--dim);padding:40px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a{color:#fff;text-decoration:none}
+
+@media (max-width:1100px){
+  .bento{grid-template-columns:repeat(2,1fr)}
+  .t-laser{grid-column:span 2;grid-row:auto}
+  .t-family{grid-column:span 2;grid-row:auto;min-height:420px}
+  .t-adj,.t-ex{grid-column:span 1}
+  .t-mas{grid-column:span 2}
+  .rgrid{grid-template-columns:repeat(2,1fr)}
+  .drx .wrap{grid-template-columns:200px 1fr}
+  .drx .wrap>div:last-child{grid-column:2}
+}
+@media (max-width:1000px){
+  .menu-btn{display:block}
+  nav.main{position:fixed;inset:0 0 auto 0;padding:96px 32px 32px;background:var(--night);flex-direction:column;align-items:stretch;gap:0;transform:translateY(-100%);transition:transform .3s ease;z-index:-1;box-shadow:0 30px 60px rgba(0,0,0,.4)}
+  .nav-open nav.main{transform:none}
+  nav.main a{padding:16px 0;border-bottom:1px solid #22303A;font-size:19px}
+  nav.main .btn{margin-top:20px;border-bottom:0}
+  .hero .wrap,.athletes .wrap,.family .wrap,.book .panels,.visit .wrap{grid-template-columns:1fr}
+  .hero{padding-top:120px}
+  .hero .actions{padding-bottom:0}
+  .hero .shot img{aspect-ratio:16/11;border-radius:10px 10px 0 0}
+  .hero .shot .tag{left:16px;bottom:16px}
+  .family .portrait{max-width:440px}
+}
+@media (max-width:640px){
+  body{font-size:16.5px}
+  .wrap{padding:0 20px}
+  header.site .wrap{height:76px}
+  .brand span{font-size:17px}
+  .hero{padding-top:104px}
+  .hero .lede{font-size:17.5px}
+  .hero .actions .btn{flex:1 1 100%}
+  .stats .wrap{grid-template-columns:1fr 1fr}
+  .stats .wrap>div{padding:22px 0 22px 18px}
+  .stats .wrap>div:nth-child(3){border-left:0;padding-left:0;border-top:1px solid #2B383D}
+  .stats .wrap>div:nth-child(4){border-top:1px solid #2B383D}
+  .services,.athletes,.family,.drx,.reviews,.book,.visit{padding:72px 0}
+  .bento{grid-template-columns:1fr}
+  .t-laser,.t-family,.t-adj,.t-ex,.t-mas{grid-column:auto}
+  .t-laser{grid-template-columns:1fr}
+  .t-family{min-height:280px}
+  .t-laser .img{order:-1;height:220px}
+  .t-laser .img::after{background:linear-gradient(0deg,var(--night),transparent 45%)}
+  .t-laser .copy{padding:28px}
+  .t-laser h3{font-size:40px}
+  .family .cols{grid-template-columns:1fr;gap:22px}
+  .drx .wrap{grid-template-columns:1fr;gap:24px}
+  .drx .wrap>div:last-child{grid-column:auto}
+  .drx img{max-width:200px}
+  .rgrid{grid-template-columns:1fr}
+  .reviews .score{font-size:96px}
+  .panel{padding:26px}
+  .row2{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Atlas Chiropractic Health Center home">
+      <img src="../assets/atlas-emblem.png" alt="" width="44" height="44">
+      <span>Atlas Chiropractic<small>HEALTH CENTER</small></span>
+    </a>
+    <button class="menu-btn" data-menu-btn aria-expanded="false" aria-controls="nav" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <nav class="main" id="nav" data-nav>
+      <a href="#services">Services</a>
+      <a href="#laser">Cold laser</a>
+      <a href="#pregnancy-kids">Pregnancy &amp; pediatric</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Hours &amp; parking</a>
+      <a class="btn btn-laser" href="https://atlaschirohc.com/new-patient-scheduler">Book online</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="kicker"><i></i><span data-today>First Hill, Seattle</span></p>
+      <h1>Chiropractic and <span class="hot">cold laser</span> on First Hill.</h1>
+      <p class="lede">Right across from the Seattle U soccer field, Dr. Corinne Xidos has treated desk workers, athletes, moms-to-be and kids since 2005. Manual full-body adjustments, Erchonia cold laser, corrective exercise and massage, all in one fifth-floor office on E Jefferson.</p>
+      <div class="actions">
+        <a class="btn btn-laser arrow" href="https://atlaschirohc.com/new-patient-scheduler">Book a new patient exam</a>
+        <a class="btn btn-ghost" href="sms:+12063242225">Text (206) 324-2225</a>
+      </div>
+    </div>
+    <div class="shot">
+      <img src="../assets/room-adjust-1067.webp" srcset="../assets/room-adjust-640.webp 640w, ../assets/room-adjust-1067.webp 1067w" sizes="(max-width:1000px) 100vw, 480px" alt="Bright adjusting room at Atlas Chiropractic with a chiropractic table and windows onto the trees" width="1067" height="711">
+      <div class="tag"><b>4.9 on Google</b>from 128 patient reviews</div>
+    </div>
+  </div>
+  <div class="beam" aria-hidden="true"></div>
+</section>
+
+<section class="stats" aria-label="Quick facts">
+  <div class="wrap">
+    <div><b>4.9</b><span>Google rating</span></div>
+    <div><b>128</b><span>Google reviews</span></div>
+    <div><b>2005</b><span>Caring for Seattle since</span></div>
+    <div><b>Free</b><span>Garage parking</span></div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="top">
+      <h2>What we do<br>in the office.</h2>
+      <p>Dr. X is a hands-on, full-body chiropractor. Most care plans mix adjustments with laser, exercise or massage, depending on what your body needs and how fast you want to get back to it.</p>
+    </div>
+    <div class="bento">
+      <article class="tile t-laser" id="laser">
+        <div class="copy">
+          <span class="pill">Erchonia FX 635, FDA-cleared</span>
+          <h3>Cold laser <span>therapy</span></h3>
+          <p>A low-level laser that targets pain at the source and calms inflammation. No drugs and no downtime. It's especially good for chronic low back pain, and you can add it to an adjustment or come in just for laser.</p>
+          <a class="btn btn-laser" href="sms:+12063242225">Text us about laser</a>
+        </div>
+        <div class="img"><img src="../assets/laser-erchonia-1400.webp" alt="Erchonia FX 635 cold laser over a patient's lower back" width="1400" height="933" loading="lazy"></div>
+      </article>
+      <article class="tile t-family">
+        <div class="copy">
+          <h3>Pregnancy &amp; pediatric</h3>
+          <p>Webster certified prenatal care, postpartum support, and gentle adjustments for babies and kids.</p>
+          <a class="more" href="#pregnancy-kids">How it works &rarr;</a>
+        </div>
+      </article>
+      <article class="tile t-adj">
+        <h3>Adjustments</h3>
+        <p>Manual, full-body chiropractic for your spine, shoulders, arms and legs. Not Atlas Orthogonal, despite our name.</p>
+      </article>
+      <article class="tile t-ex">
+        <h3>Corrective exercise</h3>
+        <p>Short routines we coach you through in the office, so the work you do here keeps working at home.</p>
+      </article>
+      <article class="tile t-mas">
+        <h3>Massage with Aimee</h3>
+        <p>Swedish, sports, deep tissue, myofascial and neuromuscular work from Aimee Hernandez, LMP, here since 2016. New massage patients join a wait list, so call or text to get on it.</p>
+      </article>
+    </div>
+    <div class="chips" aria-label="Common reasons people come in">
+      <span>Neck pain</span><span>Back pain</span><span>Headaches &amp; migraines</span><span>Shoulder pain</span><span>Arm &amp; leg pain</span><span>Scoliosis</span><span>Pregnancy back &amp; pelvic pain</span>
+    </div>
+  </div>
+</section>
+
+<section class="athletes">
+  <div class="wrap">
+    <div>
+      <h2>Swimmers, soccer players, and people who sit at a desk all day.</h2>
+      <p>Our office faces the Seattle U soccer field, so a lot of our patients are student athletes, from swimmers to soccer and volleyball players. Just as many are working adults who come in after work.</p>
+      <ul>
+        <li>Open until 6:30 Monday through Thursday</li>
+        <li>Adjustments, cold laser and sports massage in one place</li>
+        <li>Exercises you'll actually do between visits</li>
+        <li>Text and email reminders, a day ahead and an hour ahead</li>
+      </ul>
+    </div>
+    <img src="../assets/reception-1067.webp" srcset="../assets/reception-640.webp 640w, ../assets/reception-1067.webp 1067w" sizes="(max-width:1000px) 100vw, 560px" alt="Atlas Chiropractic front desk and waiting area with a magenta accent wall" width="1067" height="711" loading="lazy">
+  </div>
+</section>
+
+<section class="family" id="pregnancy-kids">
+  <div class="wrap">
+    <div class="portrait"><img src="../assets/drx-pediatric-768.webp" srcset="../assets/drx-pediatric-480.webp 480w, ../assets/drx-pediatric-768.webp 768w" sizes="(max-width:1000px) 90vw, 440px" alt="Dr. Xidos gently adjusting a baby lying on a padded table" width="768" height="1024" loading="lazy"></div>
+    <div>
+      <h2>Pregnancy and pediatric care is a specialty here.</h2>
+      <p class="lede">It's not the whole practice, but it's work Dr. X loves, and she's trained for it.</p>
+      <div class="cols">
+        <div>
+          <h3>During and after pregnancy</h3>
+          <p>Dr. X is Webster certified. She uses gentle techniques and modifies treatment at every stage, then helps with lingering back and pelvic pain after delivery. Prenatal massage may be an option too, depending on your stage.</p>
+        </div>
+        <div>
+          <h3>Babies and kids</h3>
+          <p>She sees patients from infancy through the teen years, with techniques adapted to their age, size and comfort. Not sure if it's right for your child? Call and ask. We're happy to talk it through.</p>
+        </div>
+      </div>
+      <div class="links">
+        <a href="https://atlaschirohc.com/chiropractic-new-patient-pregnancy">Pregnancy intake form</a>
+        <a href="https://atlaschirohc.com/chiropractic-new-patient-pediatric-form">Pediatric intake form</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="drx">
+  <div class="wrap">
+    <img src="../assets/drx-portrait-767.webp" srcset="../assets/drx-portrait-480.webp 480w, ../assets/drx-portrait-767.webp 767w" sizes="(max-width:640px) 60vw, 320px" alt="Dr. A. Corinne Xidos" width="767" height="915" loading="lazy">
+    <div>
+      <h2>Dr. A. Corinne Xidos</h2>
+      <p class="say">Say ex-EYE-dose. Or just Dr. X.</p>
+      <p>She found chiropractic through her own back pain and opened Atlas in June 2005. Patients describe her as thorough and knowledgeable, with what one called a "no BS but empathetic attitude."</p>
+    </div>
+    <div>
+      <p>The office runs on a small team. Chrissy manages the office and handles insurance, Falisha runs the front desk, and Aimee does massage.</p>
+      <p>Bear, Dr. X's German Shepherd, handles quality control and is usually happy to say hello.</p>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="top">
+      <div class="score">4.9</div>
+      <p><b>128 Google reviews</b>Here's what a few of them say.</p>
+    </div>
+    <div class="rgrid">
+      <blockquote>"Even after moving to Lakewood, I still make the drive to Seattle to see her because no one else compares."<cite>Jessica Tataru</cite></blockquote>
+      <blockquote>"I went in for my back pain and she also somehow fixed my knee pain!"<cite>Hannah Hale</cite></blockquote>
+      <blockquote>"It was my first time here after a great referral. I loved everything about my chiro session. Very professional and attentive."<cite>Hilkka Pandu</cite></blockquote>
+      <blockquote>"The team at Atlas Chiropractic is friendly and professional and it's clear they care about patient wellbeing. Highly recommend!"<cite>Marian McClure</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap">
+    <h2>Two ways to get started.</h2>
+    <div class="panels">
+      <div class="panel p-online">
+        <h3>Book online</h3>
+        <p>New patient exams are on our online scheduler.</p>
+        <ol>
+          <li>Pick a new patient exam time that works for you.</li>
+          <li>Fill out your intake forms before you come in.</li>
+          <li>Park free in the garage and take the elevator to the fifth floor.</li>
+        </ol>
+        <a class="btn btn-laser arrow" href="https://atlaschirohc.com/new-patient-scheduler">Open the scheduler</a>
+        <div class="forms">Intake forms<br>
+          <a href="https://atlaschirohc.com/new-patient-forms">Chiropractic new patient</a>
+          <a href="https://atlaschirohc.com/chiropractic-new-patient-pregnancy">Pregnancy</a>
+          <a href="https://atlaschirohc.com/chiropractic-new-patient-pediatric-form">Pediatric</a>
+          <a href="https://atlaschirohc.com/chiropractic-new-patient-auto-accident">Auto accident</a>
+          <a href="https://atlaschirohc.com/chiropractic-new-patient-workers-comp">Worker's comp</a>
+        </div>
+      </div>
+      <form class="panel p-form" data-preview-form>
+        <h3>Send us a note</h3>
+        <p class="sub">Questions first? Tell us a little and we'll call or text you back.</p>
+        <div class="row2">
+          <div class="field"><label for="b-name">Name</label><input id="b-name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="b-phone">Phone</label><input id="b-phone" name="phone" type="tel" autocomplete="tel" required></div>
+        </div>
+        <div class="field"><label for="b-email">Email</label><input id="b-email" name="email" type="email" autocomplete="email"></div>
+        <div class="field"><label for="b-reason">I'm interested in</label>
+          <select id="b-reason" name="reason">
+            <option>Chiropractic care</option><option>Cold laser therapy</option><option>Sports injury</option><option>Pregnancy or postpartum care</option><option>Care for my child</option><option>Auto accident (PIP)</option><option>Work injury (L&amp;I)</option><option>Something else</option>
+          </select></div>
+        <div class="field"><label for="b-msg">Message</label><textarea id="b-msg" name="message" rows="3"></textarea></div>
+        <button class="btn btn-dark" type="submit">Send</button>
+        <p class="form-note" data-form-note hidden tabindex="-1">Design preview. This form isn't connected yet, so nothing was sent.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div>
+      <h3>Getting here</h3>
+      <p>1401 E Jefferson St, Suite 501, Seattle, WA 98122. Fifth floor of the Jefferson Building, corner of E Jefferson and 14th.</p>
+      <p>Free parking in the attached garage. Visitor spaces are on the top level near the exit, or use one of our reserved spots. The accessible entrance is through the garage by the ADA spaces.</p>
+      <p><a class="textlink" href="https://www.google.com/maps/dir/?api=1&amp;destination=Atlas+Chiropractic+Health+Center,+1401+E+Jefferson+St+Ste+501,+Seattle,+WA+98122">Directions</a> &nbsp; <a class="textlink" href="tel:+12063242225">(206) 324-2225</a></p>
+    </div>
+    <div>
+      <h3>Hours</h3>
+      <div class="hours">
+        <span data-day="1">Monday</span><span data-day="1">10 to 1, 3 to 6:30</span>
+        <span data-day="2">Tuesday</span><span data-day="2">3 to 6:30</span>
+        <span data-day="3">Wednesday</span><span data-day="3">10 to 1, 3 to 6:30</span>
+        <span data-day="4">Thursday</span><span data-day="4">2 to 6:30</span>
+        <span data-day="5">Friday</span><span data-day="5">10 to 1, 3 to 6</span>
+        <span data-day="6">Saturday</span><span data-day="6">Closed</span>
+        <span data-day="0">Sunday</span><span data-day="0">Closed</span>
+      </div>
+    </div>
+    <div>
+      <h3>Insurance</h3>
+      <p class="ins">In network with Aetna, Ambetter/Coordinated Care, Anthem, Kaiser Permanente PPO and HMO, LifeWise, Meritain, Personify, Premera and Regence. We take new PIP auto accident and L&amp;I patients, and HSA and FSA cards.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Atlas Chiropractic Health Center &middot; 1401 E Jefferson St, Suite 501, Seattle, WA 98122</span>
+    <span><a href="tel:+12063242225">(206) 324-2225</a> &middot; Design preview by Local Ember</span>
+  </div>
+</footer>
+<script src="../shared/site.js"></script>
+</body>
+</html>
