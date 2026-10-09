@@ -1,0 +1,44 @@
+/* Atlas full preview: shared chrome used by the homepage AND every internal page.
+   Header dropdowns + full footer. Tokens come from the page (:root in homepage inline CSS / site.css). */
+nav.main .dd{position:relative;display:flex;align-items:center}
+nav.main .dd>a{display:inline-flex;align-items:center;gap:6px}
+nav.main .dd>a::after{content:"";width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translateY(-2px);opacity:.7}
+nav.main .dd-menu{position:absolute;top:100%;left:-18px;min-width:270px;padding:12px 0;margin-top:14px;background:var(--night);border:1px solid #26343A;border-radius:10px;box-shadow:0 24px 48px rgba(0,0,0,.45);display:flex;flex-direction:column;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .18s,transform .18s,visibility .18s;z-index:70}
+nav.main .dd-menu::before{content:"";position:absolute;left:0;right:0;top:-16px;height:16px}
+nav.main .dd-menu a{padding:9px 20px;font-size:15px;color:#DCE3E3;white-space:nowrap}
+nav.main .dd-menu a:hover,nav.main .dd-menu a:focus{color:#fff;background:#162024}
+nav.main .dd-menu a.all{margin-top:6px;padding-top:12px;border-top:1px solid #22303A;color:var(--pale-blue);font-weight:600}
+nav.main .dd:hover .dd-menu,nav.main .dd:focus-within .dd-menu{opacity:1;visibility:visible;transform:none}
+nav.main a[aria-current="page"]{color:#fff;text-decoration:underline;text-decoration-color:var(--laser);text-decoration-thickness:2px;text-underline-offset:8px}
+@media (max-width:1000px){
+  nav.main{max-height:100vh;overflow-y:auto;padding-bottom:110px!important}
+  nav.main>.btn{order:-1;margin:0 0 14px!important}
+  nav.main .dd{display:block}
+  nav.main .dd>a{display:flex;justify-content:space-between}
+  nav.main .dd>a::after{display:none}
+  nav.main .dd-menu{position:static;opacity:1;visibility:visible;transform:none;background:none;border:0;box-shadow:none;margin:0;padding:4px 0 10px 14px;min-width:0}
+  nav.main .dd-menu::before{display:none}
+  nav.main .dd-menu a{font-size:16px!important;padding:9px 0!important;border-bottom:0!important;color:#AEBBBD}
+  nav.main .dd-menu a.all{border-top:0;margin-top:0;padding-top:9px}
+}
+
+/* full footer */
+footer.site-foot{background:var(--night);color:var(--dim);padding:72px 0 0;font-size:15px}
+footer.site-foot .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;padding-bottom:56px}
+footer.site-foot h4{margin:0 0 16px;font:800 18px/1 var(--display);letter-spacing:.06em;text-transform:uppercase;color:#fff}
+footer.site-foot ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+footer.site-foot a{color:#DCE3E3;text-decoration:none}
+footer.site-foot a:hover{color:#fff;text-decoration:underline;text-underline-offset:4px}
+footer.site-foot .fbrand{display:flex;align-items:center;gap:12px;margin-bottom:18px;text-decoration:none}
+footer.site-foot .fbrand img{width:44px;height:44px}
+footer.site-foot .fbrand span{font:800 20px/1 var(--display);text-transform:uppercase;color:#fff}
+footer.site-foot .fbrand small{display:block;font:600 11px/1.4 var(--sans);letter-spacing:.22em;color:var(--dim);margin-top:4px}
+footer.site-foot address{font-style:normal;line-height:1.6;margin-bottom:12px;color:#C8D2D3}
+footer.site-foot .fphone a{color:#fff;font-weight:600}
+footer.site-foot .legal{border-top:1px solid #22303A;padding:22px 0 26px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 28px;font-size:13.5px}
+footer.site-foot .legal nav{display:flex;flex-wrap:wrap;gap:6px 18px}
+footer.site-foot .legal nav a{color:#AEBBBD}
+footer.site-foot .preview-note{display:block;width:100%;color:var(--pale-blue);font-size:13.5px}
+@media (max-width:1000px){footer.site-foot .cols{grid-template-columns:1fr 1fr;gap:36px}}
+@media (max-width:640px){footer.site-foot{padding-top:56px}footer.site-foot .cols{grid-template-columns:1fr;gap:30px;padding-bottom:40px}}
+footer.site-foot .wrap{display:block}
