@@ -207,6 +207,8 @@ nav.main .btn{color:#fff;padding:13px 20px}
 .embed-ph h3{font-size:30px;margin-bottom:10px}
 .embed-ph p{max-width:34em;margin:0 auto 10px;color:#3A4447;font-size:16px}
 .embed-ph .fallback{margin-top:20px;display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.trackstat{margin:0 0 40px}
+.trackstat iframe{display:block;width:100%;height:800px;border:0;border-radius:12px;background:#fff}
 
 /* test-only form panel */
 .p-form{background:#fff;border:1px solid var(--rule);border-radius:12px;padding:36px}

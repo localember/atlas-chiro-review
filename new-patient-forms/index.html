@@ -50,8 +50,7 @@
     
   </div>
   <div class="beam" aria-hidden="true"></div>
-</section><section class="pbody"><div class="wrap"><article class="prose"><div class="embed-ph" id="scheduler" role="note" aria-label="TrackStat scheduler placeholder"><span class="tag">TrackStat scheduler goes here</span><h3>Online booking is being set up</h3><p>This is where the TrackStat new patient scheduler will sit. We&rsquo;ll drop in the embed code once TrackStat sends it.</p><p>Until then, call or text the office and we&rsquo;ll book your new patient exam for you.</p>
-<div class="fallback"><a class="btn btn-dark" href="tel:+12063242225">Call (206) 324-2225</a><a class="btn btn-laser" href="sms:+12063242225">Text us</a></div></div>
+</section><section class="pbody"><div class="wrap"><article class="prose"><div class="trackstat" id="scheduler"><iframe id="ATLCHI26CTWA" title="Book a new patient appointment at Atlas Chiropractic" src="https://clinic.patienthealthcenters.org/embedded/book?clinic=ATLCHI26CTWA" width="100%" height="800" frameborder="0"></iframe></div>
 <p>If you would like to book a massage appointment, please call or text the office at <a href="tel:+12063242225">(206) 324-2225</a>. There is currently a wait list for new massage patients.</p>
 <h2>Intake forms</h2><p>Complete the form that matches your visit before your appointment.</p><ul class="form-list"><li><a href="../chiropractic-new-patient/">Chiropractic new patient</a></li><li><a href="../chiropractic-new-patient-auto-accident/">New patient: auto accident</a></li><li><a href="../chiropractic-new-patient-workers-comp/">New patient: worker&#x27;s comp</a></li><li><a href="../chiropractic-new-patient-pregnancy/">New patient: pregnancy</a></li><li><a href="../chiropractic-new-patient-pediatric-form/">New patient: pediatric</a></li><li><a href="../massage-new-patient-form/">Massage new patient</a></li><li><a href="../chiropractic-new-patient-re-activatenew-injury/">Re-activate / new injury</a></li><li><a href="../progress-examform/">Progress exam</a></li><li><a href="../pre-auth-form/">Pre-authorization</a></li></ul></article><aside class="side" aria-label="Book and related pages">
       <div class="card card-book">
@@ -132,5 +131,46 @@
   </a>
 </nav>
 <script src="../site-assets/js/site.js"></script>
+<script>
+  function configure() {
+    const iframeId = "ATLCHI26CTWA";
+    const iframe = document.getElementById(iframeId);
+
+    function appendQueryParams(url, params) {
+      let urlObj = new URL(url);
+      const searchParams = new URLSearchParams(urlObj.search);
+
+      for (const key in params) {
+        if (!params.hasOwnProperty(key)) continue;
+        searchParams.append(key, params[key]);
+      }
+
+      urlObj.search = searchParams.toString();
+      return urlObj.toString();
+    }
+
+    function getParamsFromURL() {
+      const searchParams = new URLSearchParams(window.location.search);
+      const params = {};
+      const keys = ["first_name", "last_name", "email", "phone", "birth_date"];
+
+      for (const key of keys) {
+        if (!searchParams.has(key)) continue;
+        params[key] = searchParams.get(key);
+      }
+
+      return params;
+    }
+
+    const params = getParamsFromURL();
+    iframe.src = appendQueryParams(iframe.src, params);
+  }
+
+  if (document.readyState === "complete") {
+    configure();
+  } else {
+    window.addEventListener("load", configure);
+  }
+</script>
 </body>
 </html>
