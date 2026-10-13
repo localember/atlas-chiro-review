@@ -283,6 +283,7 @@ nav.main .btn{color:#fff;padding:13px 20px}
 .member .role{font-size:14px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--laser);margin:6px 0 12px}
 .member p{font-size:15.5px;color:#3A4447}
 .member .say{font-size:14.5px;color:#5A6568;font-style:italic;margin:0}
+.member .more{display:inline-block;margin:2px 0 12px}
 .member.lead{grid-column:1/-1;display:grid;grid-template-columns:1fr 1.3fr}
 .member.lead .ph{aspect-ratio:auto;min-height:100%}
 /* faq */
