@@ -1,6 +1,20 @@
 /* Atlas preview shared behavior: mobile menu, today's hours, preview-only forms,
    sticky mobile action bar, form Send ready state, soft scroll reveals. */
 (function(){
+  if(!window.__atlasFormSubmit){
+    window.__atlasFormSubmit=true;
+    document.addEventListener('submit',function(e){
+      var f=e.target;
+      if(!f||!f.tagName||String(f.tagName).toLowerCase()!=='form') return;
+      if(typeof window.gtag!=='function') return;
+      window.gtag('event','form_submit',{
+        form_id:f.id||'',
+        form_name:f.getAttribute('name')||f.id||'form',
+        form_destination:f.getAttribute('action')||window.location.href
+      });
+    },true);
+  }
+
   var btn=document.querySelector('[data-menu-btn]');
   var body=document.body;
   function setOpen(o){
